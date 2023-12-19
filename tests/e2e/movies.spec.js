@@ -3,7 +3,7 @@ const { test } = require('../support')
 const data = require('../support/fixtures/movies.json')
 const { executeSQL } = require('../support/database')
 
-test('deve poder cadastrar um novo filme', async ({ page }) => {
+test('deve poder cadastrar um novo filme', async ({ page, request }) => {
     const movie = data.create
     await executeSQL(`DELETE from movies WHERE title = '${movie.title}';`)
 
