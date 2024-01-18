@@ -15,6 +15,15 @@ test('deve poder cadastrar um novo filme', async ({ page }) => {
     await page.popup.haveText(`O filme '${movie.title}' foi adicionado ao catálogo.`)
 })
 
+test('deve poder remover um filme', async ({ page, request }) => {
+    const movie = data.to_remove
+    await request.api.postMovie(movie)
+
+    await page.login.do('admin@zombieplus.com', 'pwd123', 'Admin')
+    await page.movies.remove(movie.title)
+    await page.popup.haveText('Filme removido com sucesso.')
+})
+
 test('não deve cadastrar quando o título é duplicado', async ({ page, request }) => {
     const movie = data.duplicate
     await request.api.postMovie(movie)

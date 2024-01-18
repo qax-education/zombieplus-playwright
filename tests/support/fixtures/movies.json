@@ -15,13 +15,13 @@
       "featured": false,
       "cover": "/covers/movies/resident-evil.jpg"
     },
-    "a_noite_dos_mortos_vivos": {
+    "to_remove": {
       "title": "A Noite dos Mortos-Vivos",
       "overview": "Um grupo de pessoas fica preso em uma casa enquanto zumbis canibais famintos cercam o local.",
-      "company": "Continental Distributing",
+      "company": "Universal Pictures",
       "release_year": 1968,
       "featured": false,
-      "cover": "/caminho/para/a_noite_dos_mortos_vivos.png"
+      "cover": "/covers/movies/mortos-vivos.jpg"
     },
     "exterminio": {
       "title": "Extermínio",
